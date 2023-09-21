@@ -1,5 +1,5 @@
-import { Alert, Text } from "react-native";
-import { useState, useReducer, useContext } from "react";
+import { Text } from "react-native";
+import { useState, useContext } from "react";
 import styled from "styled-components/native";
 
 import DiceOne from "../assets/Alea_1.png";
@@ -74,7 +74,7 @@ const HomeScreen = ({ navigation }) => {
 		if (resultado >= 7) {
 			stateContext.dispatch({
 				type: "jogada",
-				resultado: "venceu",
+				resultado: "Venceu",
 				data,
 			});
 			// Alert.alert("Venceu!", "vc venceu oba :)");
@@ -83,7 +83,7 @@ const HomeScreen = ({ navigation }) => {
 		if (resultado < 7) {
 			stateContext.dispatch({
 				type: "jogada",
-				resultado: "perdeu",
+				resultado: "Perdeu",
 				data,
 			});
 			// Alert.alert("Perdeu!", "vc perdeu aff :(");
