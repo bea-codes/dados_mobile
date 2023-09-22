@@ -9,7 +9,7 @@ import DiceFour from "../assets/Alea_4.png";
 import DiceFive from "../assets/Alea_5.png";
 import DiceSix from "../assets/Alea_6.png";
 
-import { GlobalContext } from "../App";
+import { GlobalContext } from "../globalContext";
 
 const HomeScreen = ({ navigation }) => {
 	const stateContext = useContext(GlobalContext);
@@ -149,7 +149,7 @@ const BotaoPressable = styled.Pressable`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: blueviolet;
+	background-color: #4660d5;
 	border-radius: 15px;
 `;
 

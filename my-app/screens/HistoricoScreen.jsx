@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 
-import { GlobalContext } from "../App";
+import { GlobalContext } from "../globalContext";
 
 const HistoricoScreen = () => {
 	const stateContext = useContext(GlobalContext);
@@ -14,7 +14,7 @@ const HistoricoScreen = () => {
 				renderItem={({ item }) => (
 					<Item date={item.data} resultado={item.resultado} />
 				)}
-				keyExtractor={(item) => item.data}
+				keyExtractor={(item) => item.id}
 			/>
 		</HistoricoWrapper>
 	);
