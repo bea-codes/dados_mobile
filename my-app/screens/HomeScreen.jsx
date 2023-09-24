@@ -72,6 +72,7 @@ const HomeScreen = ({ navigation }) => {
 		}
 
 		let resultado = dado1 + dado2;
+
 		if (resultado >= 7) {
 			stateContext.dispatch({
 				type: "jogada",
@@ -79,7 +80,6 @@ const HomeScreen = ({ navigation }) => {
 				data,
 			});
 			setResultado("Venceu!");
-			// Alert.alert("Venceu!", "vc venceu oba :)");
 		}
 
 		if (resultado < 7) {
@@ -89,13 +89,12 @@ const HomeScreen = ({ navigation }) => {
 				data,
 			});
 			setResultado("Perdeu!");
-			// Alert.alert("Perdeu!", "vc perdeu aff :(");
 		}
 	};
 
 	return (
 		<HomeWrapper>
-			<Text> {resultado} </Text>
+			<Resultado> {resultado} </Resultado>
 
 			<Dados>
 				<Dado source={dado1}></Dado>
@@ -123,6 +122,10 @@ const HomeWrapper = styled.View`
 	gap: 50px;
 	width: 100%;
 	height: 100%;
+`;
+
+const Resultado = styled.Text`
+	font-size: 24px;
 `;
 
 const Dados = styled.View`
