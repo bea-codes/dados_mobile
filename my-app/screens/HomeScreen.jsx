@@ -14,6 +14,7 @@ import { GlobalContext } from "../globalContext";
 const HomeScreen = ({ navigation }) => {
 	const stateContext = useContext(GlobalContext);
 
+	const [resultado, setResultado] = useState("");
 	const [dado1, setDado1] = useState(DiceOne);
 	const [dado2, setDado2] = useState(DiceThree);
 
@@ -77,6 +78,7 @@ const HomeScreen = ({ navigation }) => {
 				resultado: "Venceu",
 				data,
 			});
+			setResultado("Venceu!");
 			// Alert.alert("Venceu!", "vc venceu oba :)");
 		}
 
@@ -86,13 +88,14 @@ const HomeScreen = ({ navigation }) => {
 				resultado: "Perdeu",
 				data,
 			});
+			setResultado("Perdeu!");
 			// Alert.alert("Perdeu!", "vc perdeu aff :(");
 		}
 	};
 
 	return (
 		<HomeWrapper>
-			<Text> Resultado aqui </Text>
+			<Text> {resultado} </Text>
 
 			<Dados>
 				<Dado source={dado1}></Dado>
