@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
 import styled from "styled-components/native";
 
-import { GlobalContext } from "../globalContext";
+import { GlobalContext } from "../../globalContext";
 
 const HistoricoScreen = () => {
 	const stateContext = useContext(GlobalContext);
